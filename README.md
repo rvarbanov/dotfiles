@@ -5,6 +5,7 @@ Radi's dotfiles
 
 To use them:
 ```
+$ brew install stow
 $ cd ~
 $ git clone https://github.com/rvarbanov/dotfiles.git
 $ cd dotfiles
