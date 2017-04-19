@@ -5,7 +5,7 @@ Radi's dotfiles
 
 To use them:
 ```
-$ git clone https://github.com/rhinoceraptor/dotfiles.git ~/
+$ git clone https://github.com/rvarbanov/dotfiles.git ~/
 $ cd dotfiles
 $ ./install.sh
 ```
