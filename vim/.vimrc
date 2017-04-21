@@ -238,9 +238,11 @@ Plugin 'christoomey/vim-tmux-navigator'
 " Editor Config
 Plugin 'editorconfig/editorconfig-vim'
 " FZF
-Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'mileszs/ack.vim'
+
+" Plugin 'ctrlpvim/ctrlp.vim'
 
 "-----------------------"
 " Autocomplete packages "
