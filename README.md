@@ -1,8 +1,6 @@
 dotfiles
 --------
 
-Radi's dotfiles
-
 To use them:
 ```
 $ brew install stow
