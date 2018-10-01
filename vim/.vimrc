@@ -1,7 +1,3 @@
-"---------------"
-" Jack's .vimrc "
-"---------------"
-
 "------------------------"
 " General editor settings"
 "------------------------"
@@ -9,6 +5,7 @@
 " Convenient whitespace marking
 set list
 set listchars=tab:>\ ,eol:¬
+"set lisp
 
 " Enable mouse
 set mouse=a
@@ -48,8 +45,14 @@ set pastetoggle=<F2>
 setlocal shiftwidth=2
 
 "set clipboard=unnamedplus
+if $TMUX == ''
+  set clipboard+=unnamed
+endif
 " Y yanks to system clipboard
 "vnoremap <C-c> :w !xsel --clipboard<CR><CR>
+
+"Search for visually selected text
+vnoremap // y/<C-R>"<CR>
 
 " Look for indent style in ~/.vim/indent/
 filetype indent on
@@ -293,10 +296,10 @@ let g:seoul256_background = 256
 
 " : Git Gutter emoji config
 silent! if emoji#available()
-  let g:gitgutter_sign_added = emoji#for('white_check_mark')
-  let g:gitgutter_sign_modified = emoji#for('large_orange_diamond')
-  let g:gitgutter_sign_removed = emoji#for('x')
-  let g:gitgutter_sign_modified_removed = emoji#for('warning')
+  " let g:gitgutter_sign_added = emoji#for('white_check_mark')
+  " let g:gitgutter_sign_modified = emoji#for('large_orange_diamond')
+  " let g:gitgutter_sign_removed = emoji#for('x')
+  " let g:gitgutter_sign_modified_removed = emoji#for('warning')
 endif
 
 
