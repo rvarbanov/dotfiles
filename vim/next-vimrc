@@ -1,0 +1,93 @@
+set nocompatible
+filetype off                   " required!
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle
+" required!
+Plugin 'gmarik/Vundle.vim'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'scrooloose/syntastic'
+Plugin 'wlangstroth/vim-racket'
+Plugin 'pangloss/vim-javascript'
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'rking/ag.vim'
+Plugin 'elzr/vim-json'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+
+call vundle#end()
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_switch_buffer = 'et'  " if file is already open, open it in a new pane
+filetype plugin indent on     " required!
+au BufRead,BufNewFile *.json set filetype=json
+cabbr <expr> %% expand('%:p:h')
+
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+set encoding=utf-8
+set showcmd
+set noshowmode
+
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set whichwrap+=<,>,[,]
+set backspace=indent,eol,start
+
+syntax enable
+let g:syntastic_html_tidy_ignore_errors = [ 'proprietary attribute','not recognized','discarding','trimming empty' ]
+let g:syntastic_javascript_checkers = ['eslint']
+set termguicolors
+set background=dark
+colorscheme solarized8_flat
+set t_Co=16
+
+" For airline
+set laststatus=2
+let g:airline_powerline_fonts = 1
+set ttimeoutlen=50
+
+" For gvim
+set guifont=Ubuntu\ Mono\ derivative\ Powerline:h14
+" set guifont=Monoid:h12
+" set guifont=Fira\ Code:h13
+set guioptions-=T
+set guioptions-=m
+
+" Use <C-L> to clear the highlighting of :set hlsearch.
+if maparg('<C-L>', 'n') ==# ''
+  nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
+endif
+
+map <C-Tab> gt
+map <C-S-Tab> gT
+map <C-t> :tabnew<CR>
+map <C-n> :NERDTreeToggle<CR>
+
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "*",
+    \ "Staged"    : "+",
+    \ "Untracked" : "+",
+    \ "Renamed"   : "*",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "-",
+    \ "Dirty"     : "*",
+    \ "Clean"     : " ",
+    \ "Unknown"   : "?"
+    \ }
+
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
