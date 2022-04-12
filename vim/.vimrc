@@ -158,7 +158,8 @@ set dir=~/.vim/tmp/swp//
 "-----"
 " FZF "
 "-----"
-set rtp+=~/.fzf
+set rtp+=/usr/local/opt/fzf
+"set rtp+=~/.fzf
 nnoremap <C-p> :FZF -m<cr>
 
 "-----------------"
@@ -233,7 +234,7 @@ Plugin 'scrooloose/nerdtree.git'
 " Git integration for Nerd Tree
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Trailing whitespace is evil!
-Bundle 'ntpeters/vim-better-whitespace'
+"Bundle 'ntpeters/vim-better-whitespace'
 " Status line
 Plugin 'itchyny/lightline.vim'
 " Tmux/Vim helper
@@ -263,7 +264,7 @@ Plugin 'isRuslan/vim-es6'
 " Jade templates
 Plugin 'digitaltoad/vim-jade'
 " Handlebars templates
-Plugin 'mustache/vim-mustache-handlebars'
+"Plugin 'mustache/vim-mustache-handlebars'
 " Stylus
 Plugin 'wavded/vim-stylus'
 " Ansible
@@ -293,6 +294,11 @@ let g:lightline = {
   \ }
 colo seoul256
 let g:seoul256_background = 256
+
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+  "let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+"let g:ctrlp_show_hidden = 1
+"let g:ctrlp_dotfiles = 1
 
 " : Git Gutter emoji config
 silent! if emoji#available()

@@ -57,3 +57,18 @@ alias npmg="sudo npm install -g"
 alias netscan="sudo arp-scan --interface=en0 --localnet"
 
 alias bnode="babel-node --presets es2015"
+
+# Kube Config Setters
+#alias kubeprodmain='export KUBECONFIG=~/.kube/stockx.prod.main'
+alias kubeprod='export AWS_SDK_LOAD_CONFIG=1; export KUBECONFIG=~/.kube/kubeconfig-stark-production; export AWS_PROFILE=production'
+alias kubestaging='export AWS_SDK_LOAD_CONFIG=1; export KUBECONFIG=~/.kube/kubeconfig-arryn-staging-redux; export AWS_PROFILE=arryn-staging-redux'
+alias kubesandbox='export AWS_SDK_LOAD_CONFIG=1; export KUBECONFIG=~/.kube/kubeconfig-dev-sandbox-redux; export AWS_PROFILE=dev-sandbox-redux'
+
+# AWS Cli creds
+alias awsprod='export AWS_PROFILE=production'
+alias awsstaging='export AWS_PROFILE=staging'
+alias awssandbox='export AWS_PROFILE=sandbox'
+
+alias helm2="/usr/local/opt/helm@2/bin/helm"
+alias helm3="/usr/local/opt/helm@3/bin/helm"
+

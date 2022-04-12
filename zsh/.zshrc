@@ -92,3 +92,12 @@ antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-completions
 
 antigen apply
+
+# StockX
+export GOPRIVATE="github.com/stockx"
+source ~/stockx/git/vault-scripts/app.sh
+
+export HELM_EXPERIMENTAL_OCI=1
+
+export PATH=$PATH:~/go/bin
+

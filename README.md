@@ -26,9 +26,20 @@ TODO:
 ctrl-w w or ctrl-h,j,k,l
 :vsp || :sp
 ctrl-a s || v
-fzf???
+
+had to run:
+```
+ln -s dotfiles/zsh/.zshrc .zshrc
+
+brew install coreutils
+
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+```
+brew install fzf??
+
 
 zsh-syntax-highlighting: unhandled ZLE widget 'history-substring-search-up'
 zsh-syntax-highlighting: (This is sometimes caused by doing `bindkey <keys> history-substring-search-up` without creating the 'history-substring-search-up' widget with `zle -N` or `zle -C`.)
 zsh-syntax-highlighting: unhandled ZLE widget 'history-substring-search-down'
 zsh-syntax-highlighting: (This is sometimes caused by doing `bindkey <keys> history-substring-search-down` without creating the 'history-substring-search-down' widget with `zle -N` or `zle -C`.)
+

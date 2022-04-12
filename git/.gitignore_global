@@ -9,3 +9,5 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
+# IDE stuff
+.idea
