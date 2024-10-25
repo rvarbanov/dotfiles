@@ -3,6 +3,10 @@ dotfiles
 
 To use them:
 ```
+$ brew install coreutils
+$ brew install diff-so-fancy
+$ brew install ack
+$ brew install zsh-syntax-highlighting
 $ brew install stow
 $ cd ~
 $ git clone https://github.com/rvarbanov/dotfiles.git

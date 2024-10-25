@@ -72,3 +72,5 @@ alias awssandbox='export AWS_PROFILE=sandbox'
 alias helm2="/usr/local/opt/helm@2/bin/helm"
 alias helm3="/usr/local/opt/helm@3/bin/helm"
 
+alias bp="source ~/.zshrc"
+

@@ -93,11 +93,17 @@ antigen bundle zsh-users/zsh-completions
 
 antigen apply
 
-# StockX
-export GOPRIVATE="github.com/stockx"
-source ~/stockx/git/vault-scripts/app.sh
-
 export HELM_EXPERIMENTAL_OCI=1
 
 export PATH=$PATH:~/go/bin
+#echo 'export PATH="/opt/homebrew/opt/go@1.19/bin:$PATH"' >> ~/.zshrc
+#export PATH="/opt/homebrew/opt/go@1.19/bin:$PATH"
+#export PATH="/opt/homebrew/opt/go@1.20/bin:$PATH"
+export PATH="/opt/homebrew/opt/go@1.21/bin:$PATH"
+export ASSUME_NO_MOVING_GC_UNSAFE_RISK_IT_WITH=go1.19
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 

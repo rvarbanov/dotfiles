@@ -127,7 +127,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 let g:NERDTreeChDirMode       = 2
 
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",
@@ -138,7 +138,7 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Clean"     : "✔︎",
     \ "Unknown"   : "?"
     \ }
-"let g:NERDTreeIndicatorMapCustom = {
+"let g:NERDTreeGitStatusIndicatorMapCustom  = {
 "    \ "Modified"  : "🔸 ",
 "    \ "Staged"    : "✅  ",
 "    \ "Untracked" : "🆕  ",
@@ -307,5 +307,4 @@ silent! if emoji#available()
   " let g:gitgutter_sign_removed = emoji#for('x')
   " let g:gitgutter_sign_modified_removed = emoji#for('warning')
 endif
-
 
